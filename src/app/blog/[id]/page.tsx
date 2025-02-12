@@ -1,11 +1,15 @@
-import BlogPost from "@/components/BlogPost";
-import { prisma } from "@/lib/prisma";
-import { notFound } from "next/navigation";
+import BlogPost from '@/components/BlogPost';
+import { notFound } from 'next/navigation';
+import prisma from '@/lib/prisma';
 
-export default async function BlogPostPage({ params }: { params: { id: string } }) {
-  
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const resolvedParams = await params;
   const post = await prisma.blogPost.findUnique({
-    where: { id: params.id },
+    where: { id: resolvedParams.id },
   });
 
   if (!post) return notFound();
