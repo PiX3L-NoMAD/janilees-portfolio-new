@@ -20,7 +20,7 @@ export default async function Blog() {
   return (
     <div className='max-w-2xl mx-auto mt-10'>
       <h1 className='text-3xl font-bold text-center m-3'>
-        + Janilee&apos;s Dev Blog
+        Janilee&apos;s Dev Blog
       </h1>
       <Card>
         <ul>
