@@ -1,8 +1,9 @@
 'use client';
 
-import { Card, CardContent } from './Card';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import Button from './ui/Button';
+import Home from './Portfolio';
 
 interface Post {
   id: string;
@@ -16,8 +17,7 @@ export default function Blog() {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    // Fetch data from your API
-    fetch('/api/blog')
+    fetch('/api/blog_posts')
       .then((res) => res.json())
       .then((data) => {
         setPosts(data);
@@ -37,32 +37,32 @@ export default function Blog() {
   }
 
   return (
-    <div className='max-w-2xl mx-auto mt-10'>
-      <h1 className='text-3xl font-bold text-center m-3'>
+    <section className='pt-5 pb-20 px-6 text-left bg-gradient-to-b from-gray-800 to-gray-900'>
+      <h2 className='text-3xl font-bold text-purple-400 text-center'>
         Janilee&apos;s Dev Blog
-      </h1>
-      <Card>
-        <ul>
-          {posts.map((post: Post) => (
-            <li key={post.id}>
-              <CardContent>
+      </h2>
+      <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <div className='p-6 bg-gray-800 rounded-lg shadow-lg'>
+          <ul>
+            {posts.map((post: Post) => (
+              <li key={post.id}>
                 <Link
                   href={`/blog/${post.id}`}
-                  className='text-xl text-pink-600 hover:underline'
+                  className='text-xl font-bold text-white hover:text-pink-500 transition ease-in-out'
                 >
                   {post.title}
                 </Link>
-                <p className='text-gray-600 text-sm'>
+                <p className='text-gray-400 my-2 text-sm'>
                   Published{' '}
                   {new Date(
                     post.createdAt
                   ).toUTCString()}
                 </p>
-              </CardContent>
-            </li>
-          ))}
-        </ul>
-      </Card>
-    </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 }

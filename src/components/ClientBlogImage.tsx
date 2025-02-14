@@ -39,7 +39,7 @@ export default function ClientBlogImage({
       width='600'
       height='400'
       alt={`Image of ${title}`}
-      className='w-full h-64 object-cover rounded-lg mt-4'
+      className='max-w-auto h-64 object-cover rounded-lg mt-4'
     />
   );
 }

@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+@layer utilities {
+  @keyframes neonGlow {
+    0% {
+      box-shadow: 0 0 5px rgba(255, 0, 255, 0.7), 0 0 10px rgba(255, 0, 255, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(255, 0, 255, 0.7), 0 0 10px rgba(255, 0, 255, 0.7);
+    }
+  }
+
+  .animate-neonGlow {
+    animation: neonGlow 2s infinite alternate;
+  }
+
+  .shadow-neon {
+    box-shadow: 0 0 15px 5px rgba(255, 0, 255, 0.7), 0 0 25px 10px rgba(0, 255, 0, 0.5);
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
