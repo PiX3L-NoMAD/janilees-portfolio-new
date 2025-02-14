@@ -1,5 +1,9 @@
-import Blog from '@/components/Blog.tsx';
+import Blog from '@/components/Blog';
 
-export default async function BlogPage() {
-  return <div>{<Blog />}</div>;
+export default function BlogPage() {
+  return (
+    <div>
+      <Blog />
+    </div>
+  );
 }

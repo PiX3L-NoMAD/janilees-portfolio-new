@@ -1,21 +1,40 @@
-import prisma from '@/lib/prisma.ts';
-import { Card, CardContent } from './Card.tsx';
+'use client';
+
+import { Card, CardContent } from './Card';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 interface Post {
   id: string;
   title: string;
   body: string;
-  createdAt: Date;
+  createdAt: string;
 }
 
-export default async function Blog() {
-  const posts: Post[] = (
-    await prisma.blogPost.findMany({})
-  ).map((post: Post) => ({
-    ...post,
-    createdAt: post.createdAt,
-  }));
+export default function Blog() {
+  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    // Fetch data from your API
+    fetch('/api/blog')
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error(
+          'Error fetching blog posts:',
+          error
+        );
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div>Loading posts...</div>;
+  }
 
   return (
     <div className='max-w-2xl mx-auto mt-10'>
