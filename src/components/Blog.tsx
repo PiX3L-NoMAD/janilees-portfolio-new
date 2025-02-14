@@ -2,8 +2,6 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Button from './ui/Button';
-import Home from './Portfolio';
 
 interface Post {
   id: string;
