@@ -1,6 +1,6 @@
-import BlogPost from '@/components/BlogPost';
-import { notFound } from 'next/navigation';
-import prisma from '@/lib/prisma';
+import BlogPost from '@/components/BlogPost.tsx';
+import { notFound } from 'next/navigation.js';
+import prisma from '@/lib/prisma.ts';
 
 export default async function BlogPostPage({
   params,

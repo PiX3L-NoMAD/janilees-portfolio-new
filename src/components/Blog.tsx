@@ -1,5 +1,5 @@
-import prisma from '@/lib/prisma';
-import { Card, CardContent } from './Card';
+import prisma from '@/lib/prisma.ts';
+import { Card, CardContent } from './Card.tsx';
 import Link from 'next/link';
 
 interface Post {
