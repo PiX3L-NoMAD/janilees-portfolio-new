@@ -1,10 +1,10 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
-import ClientBlogImage from './ClientBlogImage.tsx';
-import GlowDivider from './ui/GlowDivider.tsx';
-import Footer from './Footer.tsx';
-import Button from './ui/Button.tsx';
+import ClientBlogImage from './ClientBlogImage';
+import GlowDivider from './ui/GlowDivider';
+import Footer from './Footer';
+import Button from './ui/Button';
 import Link from 'next/link';
 
 export default function BlogPost({
@@ -22,11 +22,11 @@ export default function BlogPost({
       <Link href='/'>
         <Button>Go Back</Button>
       </Link>
-      <h1 className='max-w-3xl text-3xl font-bold text-purple-400 mt-3 px-6 text-left'>
-        {post.title}
-      </h1>
-      <div className='mt-1 gap-6 mx-auto'>
-        <div className='mx-auto p-6 rounded-lg shadow-lg'>
+      <div className='max-w-2xl mt-1 gap-6 mx-auto'>
+        <h1 className='max-w-2xl text-3xl font-bold text-purple-400 mt-3 px-6'>
+          {post.title}
+        </h1>
+        <div className='mx-auto p-6'>
           <p className='text-gray-400 mx-auto text-base'>
             By Janilee Svaerdstaal,{' '}
             <i>Full-Stack Software Developer</i>
@@ -56,7 +56,6 @@ export default function BlogPost({
         </div>
       </div>
       <GlowDivider />
-
       <Footer />
     </div>
   );

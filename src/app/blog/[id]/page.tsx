@@ -1,6 +1,6 @@
-import BlogPost from '@/components/BlogPost.tsx';
-import { notFound } from 'next/navigation.js';
-import prisma from '@/lib/prisma.ts';
+import ClientLazyBlogPost from '@/components/ClientLazyBlogPost';
+import { notFound } from 'next/navigation';
+import prisma from '@/lib/prisma';
 
 export default async function BlogPostPage({
   params,
@@ -14,5 +14,14 @@ export default async function BlogPostPage({
 
   if (!post) return notFound();
 
-  return <BlogPost post={post} />;
+  return <ClientLazyBlogPost post={post} />;
+}
+
+export async function generateStaticParams() {
+  const posts = await prisma.blogPost.findMany({
+    take: 10,
+  });
+  return posts.map((post) => ({
+    id: post.id.toString(), // Ensure id is a string for static params
+  }));
 }

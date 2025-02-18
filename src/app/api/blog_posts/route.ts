@@ -1,7 +1,12 @@
-import prisma from "@/lib/prisma.ts";
-import { NextResponse } from "next/server.js";
+import prisma from "@/lib/prisma";
+import { NextResponse } from "next/server";
 
 export async function GET() {
-  const posts = await prisma.blogPost.findMany();
-  return NextResponse.json(posts);
+  try {
+    const posts = await prisma.blogPost.findMany({take: 10,});
+    return NextResponse.json({ posts: posts || [] });
+  } catch (error) {
+    console.log("Error fetching posts:", error);
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+  }
 }
