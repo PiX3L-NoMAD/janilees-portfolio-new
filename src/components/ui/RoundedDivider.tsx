@@ -4,7 +4,7 @@ export default function RoundedDivider() {
       <svg
         data-name='Layer 1'
         xmlns='http://www.w3.org/2000/svg'
-        viewBox='0 0 500 120'
+        viewBox='100 0 400 150'
         preserveAspectRatio='none'
       >
         <path

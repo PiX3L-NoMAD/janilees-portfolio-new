@@ -46,8 +46,8 @@ export default function BlogPost({
           <div className='my-4 text-gray-200 max-w-3xl mx-auto text-left'>
             <ReactMarkdown
               remarkPlugins={[
-                remarkGfm,
-                remarkBreaks,
+                [remarkGfm],
+                [remarkBreaks],
               ]}
             >
               {post.body}

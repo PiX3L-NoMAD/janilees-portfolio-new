@@ -16,12 +16,3 @@ export default async function BlogPostPage({
 
   return <ClientLazyBlogPost post={post} />;
 }
-
-export async function generateStaticParams() {
-  const posts = await prisma.blogPost.findMany({
-    take: 10,
-  });
-  return posts.map((post) => ({
-    id: post.id.toString(), // Ensure id is a string for static params
-  }));
-}

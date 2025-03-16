@@ -16,8 +16,12 @@ export default function BlogList() {
     fetch('/api/blog_posts')
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.posts);
-        setPosts(data.posts);
+        const sortedPosts = data.posts.sort(
+          (a: Post, b: Post) =>
+            new Date(b.createdAt).getTime() -
+            new Date(a.createdAt).getTime()
+        );
+        setPosts(sortedPosts);
         setLoading(false);
       })
       .catch((error) => {

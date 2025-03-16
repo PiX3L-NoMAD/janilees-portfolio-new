@@ -19,6 +19,8 @@
     "autoprefixer": "^10.4.20",
     "framer-motion": "^12.4.2",
     "he": "^1.2.0",
+    "mdast-util-newline-to-break": "^2.0.0",
+    "micromark-extension-gfm": "^3.0.0",
     "motion": "^12.4.2",
     "next": "^15.1.7",
     "react": "^18.3.0",

@@ -1,10 +1,12 @@
+import DownloadCVButton from './DownloadCVButton';
+
 export default function About() {
   return (
-    <section className='pt-1 pb-5 px-6 text-center bg-gray-800 top-border-gradient'>
+    <section className='pt-1 pb-2 px-6 text-center bg-gray-800 top-border-gradient md:pt-10'>
       <h2 className='text-3xl font-bold text-purple-400'>
         About Me
       </h2>
-      <p className='mt-4 text-gray-200 max-w-3xl mx-auto text-left'>
+      <p className='my-4 text-gray-200 max-w-3xl mx-auto text-left'>
         I’m a JavaScript/TypeScript & React
         developer with a background in the arts,
         bringing visual storytelling and creative
@@ -24,6 +26,7 @@ export default function About() {
         skills to contribute to inspiring
         projects.
       </p>
+      <DownloadCVButton />
     </section>
   );
 }

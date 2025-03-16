@@ -1,10 +1,29 @@
 export default function Projects() {
   return (
-    <section className='py-10 px-6 text-left'>
+    <section className='pb-10 pt-1 px-6 text-left'>
       <h2 className='text-3xl font-bold text-purple-400 text-center'>
         Projects
       </h2>
       <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <div className='p-6 bg-gray-800 rounded-lg shadow-lg'>
+          <h3 className='text-xl font-bold text-white'>
+            📈 Stock Price Prediction
+          </h3>
+          <p className='text-gray-400 mt-2'>
+            A Python-based project that predicts
+            stock prices using deep learning. It
+            fetches, preprocesses, and trains on
+            financial data to generate future
+            price trends.
+          </p>
+          <a
+            href='https://github.com/PiX3L-NoMAD/stock-price-prediction'
+            target='_blank'
+            className='text-pink-600 hover:text-pink-800'
+          >
+            GitHub Repo
+          </a>
+        </div>
         <div className='p-6 bg-gray-800 rounded-lg shadow-lg'>
           <h3 className='text-xl font-bold text-white'>
             ✨ NC News API

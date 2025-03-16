@@ -12,28 +12,31 @@ import Blog from './Blog';
 
 export default function Home() {
   return (
-    <div className='bg-gray-900 text-white min-h-screen pt-5'>
+    <div className='bg-gray-900 text-white min-h-screen pt-7 flex flex-col md:flex-row'>
       <HeroSection />
+      <div className='flex-1 md:ml-72'>
+        <div className='md:hidden'>
+          <WavyDivider />
+        </div>
 
-      <WavyDivider />
+        <About />
 
-      <About />
+        <RoundedDivider />
 
-      <RoundedDivider />
+        <Projects />
 
-      <Projects />
+        <WavyDivider />
 
-      <WavyDivider />
+        <TechStack />
 
-      <TechStack />
+        <WavyDivider />
 
-      <WavyDivider />
+        <Blog />
 
-      <Blog />
+        <GlowDivider />
 
-      <GlowDivider />
-
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 }
