@@ -10,7 +10,7 @@ interface BlogPostType {
 }
 
 const LazyBlogPost = dynamic(
-  () => import('./BlogPost'),
+  () => import('./_BlogPost'),
   {
     loading: () => <div>Loading post...</div>,
     ssr: false,

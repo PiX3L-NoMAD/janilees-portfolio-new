@@ -1,6 +1,6 @@
 'use client';
 import { Suspense } from 'react';
-import BlogList from './BlogList';
+import BlogList from './_BlogList';
 
 export default function Blog() {
   return (

@@ -8,7 +8,7 @@ import Projects from './Projects';
 import TechStack from './TechStack';
 import GlowDivider from './ui/GlowDivider';
 import Footer from './Footer';
-import Blog from './Blog';
+// import Blog from './Blog';
 
 export default function Home() {
   return (
@@ -31,7 +31,7 @@ export default function Home() {
 
         <WavyDivider />
 
-        <Blog />
+        {/* <Blog /> */}
 
         <GlowDivider />
 
