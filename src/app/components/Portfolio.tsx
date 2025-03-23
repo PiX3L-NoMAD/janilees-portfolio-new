@@ -2,7 +2,6 @@
 
 import WavyDivider from './ui/WavyDivider';
 import RoundedDivider from './ui/RoundedDivider';
-import GlowDivider from './ui/GlowDivider';
 import HeroSection from './HeroSection';
 import About from './About';
 import Projects from './Projects';
@@ -27,10 +26,6 @@ export default function Home() {
         <WavyDivider />
 
         <TechStack />
-
-        {/* <WavyDivider /> */}
-
-        {/* <GlowDivider /> */}
 
         <Footer />
       </div>
