@@ -28,9 +28,9 @@ export default function Home() {
 
         <TechStack />
 
-        <WavyDivider />
+        {/* <WavyDivider /> */}
 
-        <GlowDivider />
+        {/* <GlowDivider /> */}
 
         <Footer />
       </div>

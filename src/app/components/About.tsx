@@ -2,7 +2,7 @@ import DownloadCVButton from './DownloadCVButton';
 
 export default function About() {
   return (
-    <section className='pt-1 pb-2 px-6 text-center bg-gray-800 top-border-gradient md:pt-10'>
+    <section className='pt-1 pb-1 px-6 text-center bg-gray-800 top-border-gradient md:pt-10'>
       <h2 className='text-3xl font-bold text-purple-400'>
         About Me
       </h2>

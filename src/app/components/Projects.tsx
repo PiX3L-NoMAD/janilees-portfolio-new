@@ -1,7 +1,7 @@
 export default function Projects() {
   return (
-    <section className='pb-10 pt-1 px-6 text-left'>
-      <h2 className='text-3xl font-bold text-purple-400 text-center'>
+    <section className='pb-10 pt-0 px-6 text-left'>
+      <h2 className='text-4xl font-bold text-purple-400 text-center mb-6'>
         Projects
       </h2>
 
