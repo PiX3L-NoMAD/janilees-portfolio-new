@@ -45,7 +45,7 @@ export default function Projects() {
           </a>{' '}
           |
           <a
-            href='https://placeholder-link.com' // Replace with actual link later
+            href='https://janilees-driving-school.vercel.app/'
             target='_blank'
             className='text-pink-600 hover:text-pink-800 ml-1'
           >
